@@ -1,6 +1,6 @@
-/// <reference path="index.d.ts"/>
+// / <reference path="index.d.ts"/>
 
-import { shallow } from 'enzyme';
+import { ShallowWrapper, shallow } from 'enzyme';
 import React from 'react';
 import { Diff, parseDiff } from 'react-diff-view';
 
@@ -19,7 +19,7 @@ index 5ca1a30..4e2c90f 100644
 +  expect(root).toHaveProp('viewType', viewType);
  });`;
 
-  const render = (props = {}) => {
+  const render = (props = {}): ShallowWrapper => {
     return shallow(<DiffView diff={basicDiff} {...props} />);
   };
 
